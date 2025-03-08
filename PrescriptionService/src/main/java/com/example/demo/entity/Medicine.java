@@ -19,7 +19,7 @@ public class Medicine {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer mid; // Unique identifier for the medicine
 
-	@NotNull(message = "PID cannot be null")
+	@NotNull(message = "AID cannot be null")
 	private Integer aid; // Unique identifier for the prescription
 
 	@NotNull(message = "Name cannot be null")

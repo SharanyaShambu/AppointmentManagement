@@ -75,7 +75,7 @@ public class DoctorServiceImpl implements DoctorService {
 		if (!doctors.isEmpty()) {
 			return new ResponseEntity<>(doctors, HttpStatus.OK);
 		} else {
-			throw new SpecializationNotFound("Specialization is not found");
+			throw new SpecializationNotFound("Doctors with " +specialization+" specialization is not found");
 		}
 	}
 

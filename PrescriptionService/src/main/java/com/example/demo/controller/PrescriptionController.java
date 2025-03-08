@@ -66,7 +66,7 @@ public class PrescriptionController {
      * @throws PrescriptionNotFound if no prescription found for given patient ID
      */
     @GetMapping("/show/{patientId}")
-    public ResponseEntity<Prescription> findByPatientId(@PathVariable int patientId) throws PrescriptionNotFound {
+    public ResponseEntity<List<Prescription>> findByPatientId(@PathVariable int patientId) throws PrescriptionNotFound {
         return service.findByPatientId(patientId);
     }
 

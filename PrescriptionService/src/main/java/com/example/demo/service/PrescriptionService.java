@@ -16,7 +16,7 @@ public interface PrescriptionService {
 	
 	public ResponseEntity<String> deletePrescription(int pid);
 	
-	public ResponseEntity<Prescription> findByPatientId(int patientId) throws PrescriptionNotFound;
+	public ResponseEntity<List<Prescription>> findByPatientId(int patientId) throws PrescriptionNotFound;
 	
 	public ResponseEntity<Prescription> findByAid(int aid) throws PrescriptionNotFound;
 	

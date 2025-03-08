@@ -133,12 +133,12 @@ class PrescriptionServiceApplicationTests {
 
 		when(presRepo.findById(1)).thenReturn(Optional.of(prescription));
 
-		ResponseEntity<Prescription> result = prescriptionService.findByPatientId(1);
+		ResponseEntity<List<Prescription>> result = prescriptionService.findByPatientId(1);
 		assertNotNull(result);
-		assertEquals(1, result.getBody().getPatientid());
-		assertEquals(1, result.getBody().getAid());
-		assertEquals(1, result.getBody().getDoctorid());
-		assertNotNull(result.getBody().getDate());
+		assertEquals(1, ((Prescription) result.getBody()).getPatientid());
+		assertEquals(1, ((Medicine) result.getBody()).getAid());
+		assertEquals(1, ((Prescription) result.getBody()).getDoctorid());
+		assertNotNull(((AppointmentDto) result.getBody()).getDate());
 	}
 
 	@Test

@@ -93,8 +93,8 @@ public class PrescriptionServiceImpl implements PrescriptionService {
 	 * @return the found prescription entity wrapped in ResponseEntity
 	 * @throws PrescriptionNotFound if no prescription found for given patient ID
 	 */
-	public ResponseEntity<Prescription> findByPatientId(int patientId) throws PrescriptionNotFound {
-		Prescription prescription = presRepo.findByPatientid(patientId);
+	public ResponseEntity<List<Prescription>> findByPatientId(int patientId) throws PrescriptionNotFound {
+		List<Prescription> prescription = presRepo.findByPatientid(patientId);
 		if (prescription!=null) {
 			return ResponseEntity.ok(prescription);
 		} else {
