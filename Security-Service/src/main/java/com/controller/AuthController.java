@@ -46,8 +46,8 @@ public class AuthController {
 		return service.addUser(userInfo);
 	}
 
+	
 	@PostMapping("/authenticate") // http://localhost:9090/auth/authenticatepublic
-
 	public AuthResponseDto authenticateAndGetToken(@RequestBody AuthRequest authRequest)
 
 	{
