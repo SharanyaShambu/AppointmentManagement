@@ -30,7 +30,7 @@ public class Appointment {
     private Integer doctorId; // Unique identifier for the doctor
 
     @NotNull(message = "Date cannot be null") // Validation to ensure date is not null
-    @Future(message = "Date must be in the future") // Validation to ensure the date is in the future
+   // @Future(message = "Date must be in the future") // Validation to ensure the date is in the future
     private LocalDate date; // Date of the appointment
 
     @NotNull(message = "Time cannot be null") // Validation to ensure time is not null
